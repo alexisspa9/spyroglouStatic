@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /en/villas/agiasi-villa-3-with-private-pool
+Disallow: /en/agiasi-villas-gallery
