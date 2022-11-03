@@ -97,51 +97,20 @@
    <hr>
    <br><br>
   <div class="form-container-contact container-small">
-<form class="new_message" id="new_message" action="contact-us.html" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Ca7p+hRGDWo20lVte3Z0O3e03o4Ojje07eZ97wLKPP2B7tCQF5e75DB+4iZpOzfMnI5Uw8L5IlPAumFYHYFaRA==" />
- <span style="color: green">  </span>
-  <span style="color: red"> </span>
-  <br>
- <label>Fullname</label>
-  <input required="required" type="text" name="message[name]" id="message_name" />
-   <label>Email</label>
-  <input required="required" type="email" name="message[email]" id="message_email" />
-  <label>Your Message</label>
- <textarea name="message[body]" id="message_body"></textarea>
-<br><br>
-  <span class="form_check">
-   <input name="message[checked]" type="hidden" value="0" /><input required="required" type="checkbox" value="1" name="message[checked]" id="message_checked" />I accept to send my personal contact information
-   </span>
-   <br><br>
-     <span class="form_check">
-    <script src="../../www.google.com/recaptcha/api.js" async defer></script>
-<div class="g-recaptcha " data-sitekey="6Leb2EIUAAAAAF003paFfPCIhuK_F5pEHK3Ufxaf"></div>
-          <noscript>
-            <div>
-              <div style="width: 302px; height: 422px; position: relative;">
-                <div style="width: 302px; height: 422px; position: absolute;">
-                  <iframe
-                    src="https://www.google.com/recaptcha/api/fallback?k=6Leb2EIUAAAAAF003paFfPCIhuK_F5pEHK3Ufxaf"
-                    frameborder="0" scrolling="no"
-                    style="width: 302px; height:422px; border-style: none;">
-                  </iframe>
-                </div>
-              </div>
-              <div style="width: 300px; height: 60px; border-style: none;
-                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
-                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
-                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                  class="g-recaptcha-response"
-                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
-                  margin: 10px 25px; padding: 0px; resize: none;" value="">
-                </textarea>
-              </div>
-            </div>
-          </noscript>
 
-</span>
-<br>
-  <input type="submit" name="commit" value="Send Message" class="admin-button" data-disable-with="Send Message" />
-</form>
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xjvzplra" method="post">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_replyto" id="email-address" placeholder="example@gmail.com" required="true">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Your Message" required=""></textarea>
+        <div class="g-recaptcha" data-sitekey="6Leb2EIUAAAAAF003paFfPCIhuK_F5pEHK3Ufxaf"></div> <!-- replace with your recaptcha SITE key not secret key -->
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
 
   </div>
 
