@@ -189,13 +189,6 @@ We have extensive experience in the field of electromechanical studies and insta
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-  function initMap() {
-    var mapEl = document.getElementById('map');
-    if (!mapEl) return;
-    var pos = { lat: 37.078324, lng: 25.139087 };
-    var map = new google.maps.Map(mapEl, { zoom: 14, scrollwheel: false, center: pos });
-    new google.maps.Marker({ position: pos, map: map, title: 'Spyroglou Hlme' });
-  }
 
   $(document).ready(function() {
     $('.toggle-button').click(function() {
