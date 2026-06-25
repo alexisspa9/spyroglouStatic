@@ -74,6 +74,12 @@
   }
 }
 
+@media (max-width: 840px) {
+  .main-button {
+    padding: 27.5px 0px;
+  }
+}
+
 .about__text p {
   margin: 10px 0;
 }
