@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spyroglou HLME — Projects</title>
+    <meta name=theme-color content="#007AFF">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATIxAxrS6sgV455l5AibEwbkRbXOCGKGk&callback=initMap" async defer></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon-192-0085d8a15e83d144a055b08940afea6b34d2de7c6edd787a7e3ccf83e18e6bc4.png" />
+    <link rel="stylesheet" media="all" href="../../assets/application-a4ef5c0bb6f5f4c79b1399039c5cf7424692a32b3abcf8529700ba8b257568e7.css" />
+<style>
+  .social-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: center;
+  }
+  .social-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    transition: opacity 0.2s;
+  }
+  .social-share:hover { opacity: 0.85; }
+  .social-share.facebook { background: #1877F2; }
+  .social-share.whatsapp { background: #25D366; }
+  .social-share.twitter { background: #000; }
+  .social-share svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    flex-shrink: 0;
+  }
+  .projectt-container {
+  max-width: 800px;
+  margin: 60px auto 80px;
+  padding: 0 24px;
+  text-align: center;
+}
+.projectt-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+.projectt-container h1 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.project-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+.project-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #007AFF;
+  text-decoration: none;
+}
+.project-link:hover {
+  text-decoration: underline;
+}
+</style>  
+</head>
+  <body>
+    <div id="fb-root"></div>
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="../../el.html">
+            <img src="../../assets/logo/spyroglou_logo-bf27ed10a5dbb08edaf8fd9713a62e5832bb893cbd0ca2ebf9a7138b0279631a.svg" />
+          </a>
+        </div>
+        <nav>
+          <ul class="navigation">
+            <li><a href="../../el.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../contact-us.html">Contact</a></li>
+            <div class="language-selector">
+              <ul>
+                <li><a href="../../en/projects/project.html" id="lang-en">
+                  <img src="../../assets/logo/united-kingdom-1a55a5ced0b629a0bdc966b76b6cd4348cf7dc75a04a91ccc63900bea8cdbcf6.svg" />
+                </a></li>
+                <li><a href="../../el/projects/project.html" id="lang-el">
+                  <img src="../../assets/logo/greece-974b756b6956850488bd81cbf6a3f2df00b40e06e4b7333d767a70e7cb113e1a.svg" />
+                </a></li>
+              </ul>
+            </div>
+          </ul>
+        </nav>
+        <div class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div id="projectDetail"></div>
+    </div>
+
+    <footer>
+      <div class="footer-info">
+        <div class="text-container container">
+          <div class="footer-info-name">
+            <h2>SPYROGLOU HLME</h2>
+            <p>Electrical Installations</p>
+          </div>
+          <br><br>
+          <div class="footer-info-contact">
+            <div class="footer-info-map" style="height:300px;">
+              <div id="map" style="height:100%;width:100%;"></div>
+            </div>
+            <div class="footer-info-contact-det">
+              <p>Paroikia - Paros<br>84400<br>Greece</p>
+              <br><p>Contact Numbers:</p>
+              <a href="tel:+306942527086">+30 694 2527 086</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-det">
+        <div class="container">
+          <p>© 2026 Spyroglou HLME. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="call-button">
+      <a href="tel:+306942527086">
+        <img src="../../assets/logo/call-1ee4c306b2c7df9f85ef37748ebe0aad88a088a0b42c95ca8a8bdbc9cbe051a1.svg" />
+      </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  function initMap() {
+    var mapEl = document.getElementById('map');
+    if (!mapEl) return;
+    var pos = { lat: 37.078324, lng: 25.139087 };
+    var map = new google.maps.Map(mapEl, { zoom: 14, scrollwheel: false, center: pos });
+    new google.maps.Marker({ position: pos, map: map, title: 'Spyroglou Hlme' });
+  }
+
+  $(document).ready(function() {
+    $('.toggle-button').click(function() {
+      $('header').toggleClass('open');
+    });
+  });
+</script>
+
+    <script src="../../assets/projects.js"></script>
+  </body>
+</html>

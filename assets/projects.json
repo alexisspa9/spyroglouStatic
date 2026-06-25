@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "exterior-lighting",
+    "image": "bbL7chtXQH4yiogdas8hPhD5.jpeg",
+    "el": "Εξωτερικός φωτισμός",
+    "en": "Exterior Lighting",
+    "homepage": true,
+      "description_el": "Εξωτερικός φωτισμός κτηρίου στην Παροικία της Πάρου. Μελέτη και εγκατάσταση συστήματος φωτισμού LED.",
+  "description_en": "Exterior lighting installation in Paroikia, Paros. Design and installation of LED lighting system.",
+  "url": ""
+  },
+  {
+    "slug": "lighting-for-boards",
+    "image": "YAhMU3EeWW4otbRPPRxqKsTo.jpeg",
+    "el": "Φωτισμός πινάκων",
+    "en": "Lighting for Boards",
+    "homepage": true
+  },
+  {
+    "slug": "lighting-for-statues",
+    "image": "S2yQLXVJWjjnJaag78s3auMs.jpeg",
+    "el": "Φωτισμός αγαλμάτων",
+    "en": "Lighting for Statues",
+    "homepage": true
+  },
+  {
+    "slug": "hidden-lighting",
+    "image": "cWiz1NRqcQ2x6P526KHPkBFi.jpeg",
+    "el": "Κρυφός φωτισμός",
+    "en": "Hidden Lighting",
+    "homepage": true
+  },
+  {
+    "slug": "arch-lighting",
+    "image": "YKhz62TptW99iyUQD3WfhZcq.jpeg",
+    "el": "Φωτισμός καμάρας",
+    "en": "Arch Lighting",
+    "homepage": true
+  },
+  {
+    "slug": "bathroom-lighting",
+    "image": "BzrWcYUmuHbmKtUgaTWp49Hk.jpeg",
+    "el": "Φωτισμός Μπάνιου",
+    "en": "Bathroom Lighting",
+    "homepage": true
+  },
+  {
+    "slug": "main-entrance-lighting",
+    "image": "bjdz4VDGAvoVVv4iEYpcfiDv.jpeg",
+    "el": "Φωτισμός Κεντρικής Εισόδου",
+    "en": "Main Entrance Lighting",
+    "homepage": false
+  },
+  {
+    "slug": "villa-aethra",
+    "image": "PnCZeptd7qJ7jgXNPb5vnZbo.jpeg",
+    "el": "Βίλα Aethra",
+    "en": "Villa Aethra",
+    "homepage": false
+  }
+]

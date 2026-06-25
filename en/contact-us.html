@@ -36,13 +36,13 @@
     <meta name=msapplication-navbutton-color content="#007AFF">
     <meta name=apple-mobile-web-app-status-bar-style content="#007AFF">
     <!-- favicon -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATIxAxrS6sgV455l5AibEwbkRbXOCGKGk" data-turbolinks-eval="false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATIxAxrS6sgV455l5AibEwbkRbXOCGKGk&callback=initMap" async defer></script>
+
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-192-0085d8a15e83d144a055b08940afea6b34d2de7c6edd787a7e3ccf83e18e6bc4.png" />
 
 
-    <link rel="stylesheet" media="all" href="../assets/application-a4ef5c0bb6f5f4c79b1399039c5cf7424692a32b3abcf8529700ba8b257568e7.css" data-turbolinks-track="reload" />
-    <script src="../assets/application-7951ebec8d338b384c2b8a9e3c811831af9c61105a84e1a26977eaa2668f6c64.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="../assets/application-a4ef5c0bb6f5f4c79b1399039c5cf7424692a32b3abcf8529700ba8b257568e7.css" />
 
 
   </head>
@@ -158,19 +158,23 @@
 	</a>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-		$(document).on('turbolinks:load', function() {
-	  initMap(37.078324, 25.139087, 'Spyroglou Hlme');
-});
-window.onpopstate = function() {
-		$(".modal").removeClass("open");
-  		$(".modal").children(".modal_content").html(" ");
-};
+  function initMap() {
+    var mapEl = document.getElementById('map');
+    if (!mapEl) return;
+    var pos = { lat: 37.078324, lng: 25.139087 };
+    var map = new google.maps.Map(mapEl, { zoom: 14, scrollwheel: false, center: pos });
+    new google.maps.Marker({ position: pos, map: map, title: 'Spyroglou Hlme' });
+  }
 
-
-
-
+  $(document).ready(function() {
+    $('.toggle-button').click(function() {
+      $('header').toggleClass('open');
+    });
+  });
 </script>
+
       
   </body>
 </html>

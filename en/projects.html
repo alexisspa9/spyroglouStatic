@@ -36,13 +36,13 @@
     <meta name=msapplication-navbutton-color content="#007AFF">
     <meta name=apple-mobile-web-app-status-bar-style content="#007AFF">
     <!-- favicon -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATIxAxrS6sgV455l5AibEwbkRbXOCGKGk" data-turbolinks-eval="false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATIxAxrS6sgV455l5AibEwbkRbXOCGKGk&callback=initMap" async defer></script>
+
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-192-0085d8a15e83d144a055b08940afea6b34d2de7c6edd787a7e3ccf83e18e6bc4.png" />
 
 
-    <link rel="stylesheet" media="all" href="../assets/application-a4ef5c0bb6f5f4c79b1399039c5cf7424692a32b3abcf8529700ba8b257568e7.css" data-turbolinks-track="reload" />
-    <script src="../assets/application-7951ebec8d338b384c2b8a9e3c811831af9c61105a84e1a26977eaa2668f6c64.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="../assets/application-a4ef5c0bb6f5f4c79b1399039c5cf7424692a32b3abcf8529700ba8b257568e7.css" />
 
 
   </head>
@@ -95,108 +95,15 @@
 	<h1>OUR PROJECTS</h1>
 	<hr>
 	<br><br>
-	<div id="projectList">
-		<div class="projects-list">
-			<div class="project">
-	<a data-turbolinks="false" href="projects/exterior-lighting.html">
-<div class="img-wrap">
+		<div id="projectList"></div>
+	<script src="../assets/projects.js"></script>
 
-				  		      <img src="../assets/images/bbL7chtXQH4yiogdas8hPhD5.jpeg" />
-	</div>
-		<p>Exterior lighting</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/lighting-for-boards.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/YAhMU3EeWW4otbRPPRxqKsTo.jpeg" />
-	</div>
-		<p>Lighting for boards</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/lighting-for-statues.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/S2yQLXVJWjjnJaag78s3auMs.jpeg" />
-	</div>
-		<p>Lighting for statues</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/hidden-lighting.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/cWiz1NRqcQ2x6P526KHPkBFi.jpeg" />
-	</div>
-		<p>Hidden lighting</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/arch-lighting.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/YKhz62TptW99iyUQD3WfhZcq.jpeg" />
-	</div>
-		<p>Arch Lighting</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/bathroom-lighting.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/BzrWcYUmuHbmKtUgaTWp49Hk.jpeg" />
-	</div>
-		<p>Bathroom lighting</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/main-entrance-lighting.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/bjdz4VDGAvoVVv4iEYpcfiDv.jpeg" />
-	</div>
-		<p>Main Entrance Lighting</p>
-</a></div>
-			<div class="project">
-	<a data-turbolinks="false" href="projects/villa-aethra.html">
-<div class="img-wrap">
-
-				  		      <img src="../assets/images/PnCZeptd7qJ7jgXNPb5vnZbo.jpeg" />
-	</div>
-		<p>Villa Aethra</p>
-</a></div>
-</div>
-	
 
 
 	</div>
 	<br><br>
 </div>
-<div class="modal transition">
-	<header>
-		<div class="container">
-		<div class="logo">
-		<a href="../en.html">
-			<img src="../assets/logo/spyroglou_logo-bf27ed10a5dbb08edaf8fd9713a62e5832bb893cbd0ca2ebf9a7138b0279631a.svg" />
-</a>		</div>
-		<button id="modal_close">
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</button>
-		</div>
-	</header>
-	<div class="modal_content">
-		
-	</div>
-</div>
-<script>
-	$( ".category_name" ).on('change', function() {
-		$( "#projectList" ).html("<div class=\"filter-loading\" style=\"text-align:center; height:400px;\">\n  <img src=\"/assets/logo/oval-9b2741d7c042e8dcb1dd7ae6a430015d38bf196b965692ec9b13598e9f095dfb.svg\" />\n<\/div>");
-  		$( "#filterButton" ).click();
-	});
 
-	$("#filterToggle").on('click', function(){
-		$(".filters").toggleClass("open");
-		$("#filterToggle").toggleClass("open");
-
-	});
-</script>
 
         
       </div>
@@ -236,19 +143,23 @@
 	</a>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-		$(document).on('turbolinks:load', function() {
-	  initMap(37.078324, 25.139087, 'Spyroglou Hlme');
-});
-window.onpopstate = function() {
-		$(".modal").removeClass("open");
-  		$(".modal").children(".modal_content").html(" ");
-};
+  function initMap() {
+    var mapEl = document.getElementById('map');
+    if (!mapEl) return;
+    var pos = { lat: 37.078324, lng: 25.139087 };
+    var map = new google.maps.Map(mapEl, { zoom: 14, scrollwheel: false, center: pos });
+    new google.maps.Marker({ position: pos, map: map, title: 'Spyroglou Hlme' });
+  }
 
-
-
-
+  $(document).ready(function() {
+    $('.toggle-button').click(function() {
+      $('header').toggleClass('open');
+    });
+  });
 </script>
+
       
   </body>
 </html>
