@@ -8,7 +8,7 @@
 
   // ── To migrate to R2, replace the 3 lines above with: ──
   var JSON_URL = "https://pub-1612ce92f47846d6a9d03b13c28efc2a.r2.dev/projects.json";
-  var IMAGE_BASE = "https://pub-1612ce92f47846d6a9d03b13c28efc2a.r2.dev/mages/";
+  var IMAGE_BASE = "https://pub-1612ce92f47846d6a9d03b13c28efc2a.r2.dev/images/";
 
   function detectLang() {
     return window.location.pathname.indexOf('/en') !== -1 ? 'en' : 'el';
