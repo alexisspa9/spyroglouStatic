@@ -165,3 +165,11 @@ b {
     height: 100%;
     object-fit: cover;
 }
+
+input[type="text"], input[type="email"] {
+  padding-left: 10px;
+}
+textarea {
+  padding-left: 9px;
+  padding-top: 10px;
+}
